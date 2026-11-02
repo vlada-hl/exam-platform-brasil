@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Аналіз економічної безпеки Бразилії за 7 індикаторами Світового банку.">
+  <title>Аналіз економічної безпеки Бразилії</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="index.html">Бразилія: економічна безпека</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Меню</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Про автора</a></li>
+        <li><a href="analysis.html" aria-current="page">Аналіз Бразилії</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Економічна безпека Бразилії</h1>
+      <p>Сім індикаторів Світового банку (дев’ять оцінок з розбивкою за статями) у порівнянні з пороговими значеннями.</p>
+      <div class="spectrum" role="img" aria-label="Рівні безпеки дев’яти оцінок: три оптимальні, один незадовільний, один небезпечний, один критичний, три абсолютної небезпеки">
+        <span class="lv-opt">1</span><span class="lv-opt">2</span><span class="lv-opt">3</span>
+        <span class="lv-uns">4</span><span class="lv-dan">5</span><span class="lv-cri">6</span>
+        <span class="lv-abs">7</span><span class="lv-abs">8</span><span class="lv-abs">9</span>
+      </div>
+      <p class="spectrum-legend">Кожен блок — одна оцінка із зведеної таблиці: від оптимального рівня до абсолютної небезпеки.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section" id="kpis">
+      <h2>Ключові показники</h2>
+      <div class="kpis">
+        <div class="kpi"><strong>50,0</strong><span>ц/га, урожайність зернових (2024)</span></div>
+        <div class="kpi"><strong>1,016</strong><span>покриття імпорту експортом (2024)</span></div>
+        <div class="kpi warn"><strong>1,15 %</strong><span>ВВП на R&amp;D (2020)</span></div>
+        <div class="kpi bad"><strong>81,86 %</strong><span>борг уряду / ВВП (2024)</span></div>
+        <div class="kpi bad"><strong>34,2×</strong><span>розрив доходів 10 % / 10 % (2022)</span></div>
+        <div class="kpi bad"><strong>13,8 ‰</strong><span>смертність хлопчиків-немовлят (2023)</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="table">
+      <h2>Фактичні показники та порогові значення</h2>
+      <div class="filters" id="filters" role="group" aria-label="Фільтр за рівнем безпеки">
+        <button type="button" data-f="all" aria-pressed="true">Усі</button>
+        <button type="button" data-f="opt" aria-pressed="false">Оптимальний</button>
+        <button type="button" data-f="uns" aria-pressed="false">Незадовільний</button>
+        <button type="button" data-f="dan" aria-pressed="false">Небезпечний</button>
+        <button type="button" data-f="cri" aria-pressed="false">Критичний</button>
+        <button type="button" data-f="abs" aria-pressed="false">Абсолютна небезпека</button>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Показник</th><th>Факт</th><th>Порогове значення</th><th>Відхилення</th><th>Рівень</th></tr>
+          </thead>
+          <tbody id="rows">
+            <tr data-l="opt"><td>Урожайність зернових</td><td>50,03 ц/га (2024)</td><td>оптимум [45; 55]</td><td>у межах оптимуму</td><td><span class="tag lv-opt">Оптимальний</span></td></tr>
+            <tr data-l="opt"><td>Тривалість життя, жінки</td><td>79,15 року (2024)</td><td>оптимум ≥ 78</td><td>+1,15 року</td><td><span class="tag lv-opt">Оптимальний</span></td></tr>
+            <tr data-l="uns"><td>Тривалість життя, чоловіки</td><td>72,95 року (2024)</td><td>[70; 75) — незадовільний</td><td>до оптимуму −5,05 року</td><td><span class="tag lv-uns">Незадовільний</span></td></tr>
+            <tr data-l="cri"><td>Смертність немовлят, дівчатка</td><td>≈ 10,9 ‰ (2023)*</td><td>(9; 11] — критичний</td><td>до межі 11 ‰ лише 0,1</td><td><span class="tag lv-cri">Критичний</span></td></tr>
+            <tr data-l="abs"><td>Смертність немовлят, хлопчики</td><td>13,8 ‰ (2023)</td><td>абсолютна небезпека &gt; 11</td><td>+2,8 ‰ понад поріг</td><td><span class="tag lv-abs">Абсолютна небезпека</span></td></tr>
+            <tr data-l="opt"><td>Покриття імпорту експортом</td><td>1,016 (2024)</td><td>оптимум [1; 1,2]</td><td>запас лише +0,016</td><td><span class="tag lv-opt">Оптимальний</span></td></tr>
+            <tr data-l="dan"><td>Витрати на R&amp;D</td><td>1,15–1,19 % ВВП</td><td>небезпечний [1; 1,5)</td><td>до «незадовільного» −0,31…−0,35 в. п.</td><td><span class="tag lv-dan">Небезпечний</span></td></tr>
+            <tr data-l="abs"><td>Співвідношення доходів 10 % / 10 %</td><td>34,2 раза (2022)</td><td>абсолютна небезпека &gt; 7</td><td>перевищення у 4,9 раза</td><td><span class="tag lv-abs">Абсолютна небезпека</span></td></tr>
+            <tr data-l="abs"><td>Борг центрального уряду</td><td>81,86 % ВВП (2024)</td><td>абсолютна небезпека &gt; 60 %</td><td>+21,86 в. п.</td><td><span class="tag lv-abs">Абсолютна небезпека</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">* Окреме значення для дівчаток у джерелах не знайдено, воно розраховане орієнтовно (частка хлопчиків серед новонароджених ≈ 51 %). Для R&amp;D останні дані Світового банку — 2020 р. (1,15 %); один агрегатор наводить 1,19 % за 2023 р.</p>
+    </section>
+
+    <section class="section" id="charts">
+      <h2>Графіки: факт проти порогу</h2>
+      <div class="charts">
+        <div class="chart-card"><h3>Борг центрального уряду, % ВВП</h3><p>Поріг безпеки — 60 %.</p><div class="chart-box"><canvas id="cDebt"></canvas></div></div>
+        <div class="chart-card"><h3>Покриття імпорту експортом</h3><p>Поріг оптимуму — 1,0.</p><div class="chart-box"><canvas id="cCover"></canvas></div></div>
+        <div class="chart-card"><h3>Урожайність зернових, ц/га</h3><p>Оптимальний інтервал 45–55.</p><div class="chart-box"><canvas id="cGrain"></canvas></div></div>
+        <div class="chart-card"><h3>Тривалість життя, років (2024)</h3><p>Оптимум для чоловіків і жінок — від 78.</p><div class="chart-box"><canvas id="cLife"></canvas></div></div>
+        <div class="chart-card"><h3>Смертність немовлят, ‰ (2023)</h3><p>Поріг абсолютної небезпеки — 11 ‰.</p><div class="chart-box"><canvas id="cInfant"></canvas></div></div>
+        <div class="chart-card"><h3>Розподіл оцінок за рівнем безпеки</h3><p>Дев’ять оцінок із зведеної таблиці.</p><div class="chart-box"><canvas id="cLevels"></canvas></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="trends">
+      <h2>Безпечні та небезпечні тенденції</h2>
+      <div class="trend-grid">
+        <div class="trend safe">
+          <h3>Безпечні</h3>
+          <ul>
+            <li>Борг знизився з 98,71 % ВВП (2020) до 81,86 % (2024).</li>
+            <li>Торговельне сальдо додатне: +0,29 % ВВП, експорт покриває імпорт.</li>
+            <li>Урожайність зернових стабільно в оптимальному інтервалі.</li>
+            <li>Жіноча тривалість життя вища за 78 років.</li>
+          </ul>
+        </div>
+        <div class="trend risk">
+          <h3>Небезпечні</h3>
+          <ul>
+            <li>Урожайність упала приблизно на 6,3 % (53,4 → 50,03 ц/га).</li>
+            <li>Коефіцієнт покриття імпорту зменшився з 1,14 до 1,016.</li>
+            <li>Борг 2024 р. все ще на 21,86 в. п. вищий за поріг.</li>
+            <li>R&amp;D зменшилися з 1,21 % до 1,15 % ВВП (2019–2020).</li>
+            <li>Нерівність майже не змінюється: частка найбагатших 10 % — 41,0 % → 40,8 %.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section threats" id="threats">
+      <h2>Основні загрози економічній безпеці</h2>
+      <details open><summary>Надмірна нерівність доходів</summary><p>Співвідношення 34,2 раза проти порогу 7 — найбільший відносний розрив у всьому наборі індикаторів. Це підриває соціальну стабільність і внутрішній попит.</p></details>
+      <details><summary>Високий державний борг</summary><p>Борг 81,86 % ВВП перевищує безпечну межу 60 %. Обслуговування боргу звужує бюджетний простір для соціальних і інноваційних витрат.</p></details>
+      <details><summary>Дитяча смертність і демографічний розрив</summary><p>Смертність хлопчиків (13,8 ‰) у зоні абсолютної небезпеки, дівчаток — біля її межі. Чоловіча тривалість життя відстає від жіночої на 6,2 року, зокрема через насильницькі смерті серед молоді (за оцінкою IBGE).</p></details>
+      <details><summary>Слабка інноваційна складова</summary><p>Витрати на R&amp;D близько 1,2 % ВВП — небезпечний рівень. Для «незадовільного» потрібно щонайменше 1,5 % ВВП, для «задовільного» — 2 %.</p></details>
+      <details><summary>Вразливість зовнішньої торгівлі та аграрного сектору</summary><p>Коефіцієнт покриття 1,016 дає запас лише близько 1,6 %. Падіння врожайності у 2024 р. показує залежність від погодних умов.</p></details>
+    </section>
+
+    <section class="section" id="conclusion">
+      <div class="conclusion">
+        <h2>Узагальнений висновок</h2>
+        <p>Економічна безпека Бразилії поляризована: реальний сектор і зовнішня торгівля в оптимальній зоні, а соціальна та фінансова сфери — в зоні абсолютної небезпеки. З дев’яти оцінок три оптимальні, одна незадовільна, одна небезпечна, одна критична, три — абсолютна небезпека. Задовільного рівня немає.</p>
+        <p>Пріоритети: бюджетна консолідація для скорочення боргу; перерозподіл на користь найбідніших верств; охорона здоров’я матері й дитини та зниження насильницької смертності; збільшення витрат на R&amp;D до 1,5–2 % ВВП.</p>
+        <p style="margin-bottom:0">Джерело даних: Світовий банк, World Development Indicators (<a style="color:var(--yellow)" href="https://data.worldbank.org/indicator/">data.worldbank.org</a>).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">Автор: Глущенко Влада Олегівна · <span data-year>2026</span></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
